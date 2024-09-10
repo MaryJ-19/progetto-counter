@@ -1,0 +1,19 @@
+{
+  "name": "progetto-javascript-di-maria-carta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "sass": "^1.78.0"
+  },
+  "scripts": {
+    "sass": "sass --watch assets/styles/scss:assets/styles/css"
+  }
+}
