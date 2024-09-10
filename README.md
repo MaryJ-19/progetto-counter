@@ -1,5 +1,6 @@
 # progetto-counter
 Progetto Counter è il sito web che ho realizzato per presentare il progetto finale del corso Javascript di Start to Impact. Utilizza HTML, CSS, SASS e Javascript e segue gli insegnamenti appresi durante il corso. 
+Il link al sito dove provare il counter è questo: https://maryj-19.github.io/progetto-counter/
 
 ## Indice
 - [Introduzione](#introduzione)
