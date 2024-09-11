@@ -2,13 +2,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    // font-size: 24px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000;
 }
 body {
     background-color: lightblue;
     height: 100vh;
     padding: 30px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Standard */
 }
 .counter-wrapper {
     display: flex;
@@ -35,4 +39,6 @@ button {
     border-color: white;
     border-radius: 5px;
     background-color: powderblue;
+    border-width: 2px;
+    border-style: outset;
 }

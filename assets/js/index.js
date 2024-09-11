@@ -23,18 +23,22 @@ buttons.appendChild(moreButton)
 
 // funzioni 
 
-resetButton.addEventListener('click', () => {
+resetButton.addEventListener('click', (e) => {
+    e.preventDefault()
     number.innerText = '0'
 })
 
-moreButton.addEventListener('click', () => {
+moreButton.addEventListener('click', (e) => {
+    e.preventDefault()
     number.innerText = Number(number.innerText) + 1
 })
 
-lessButton.addEventListener('click', () => {
-
+lessButton.addEventListener('click', (e) => {
+    e.preventDefault()
     if (number.innerText != 0) {
         number.innerText = Number(number.innerText) - 1;
     }
 })
+
+
 
