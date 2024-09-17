@@ -1,44 +1,35 @@
-
-
 let counter = document.querySelector('.counter');
 let buttons = document.querySelector('.buttons-wrapper')
 
-// creazione elementi 
+function createElements(tagname, innerText){
+    let newElement = document.createElement(tagname)
+    newElement.innerText = innerText
 
-let number = document.createElement('h1')
-number.innerText = '0'
-counter.appendChild(number)
+    return newElement
+}
 
-const lessButton = document.createElement('button')
-lessButton.innerText = '-'
-buttons.appendChild(lessButton)
+//creazione elementi
+let number = createElements('h1', 0);
+const lessButton = createElements('button', '-');
+const resetButton =  createElements('button', 'reset');
+const moreButton = createElements('button', '+');
 
-const resetButton = document.createElement('button')
-resetButton.innerText = 'reset'
-buttons.appendChild(resetButton)
+//inserimento elementi nel DOM
+counter.appendChild(number);
+buttons.appendChild(lessButton);
+buttons.appendChild(resetButton);
+buttons.appendChild(moreButton);
 
-const moreButton = document.createElement('button')
-moreButton.innerText = '+'
-buttons.appendChild(moreButton)
-
-// funzioni 
-
-resetButton.addEventListener('click', (e) => {
+//aggiunta event listener con event delegation
+buttons.addEventListener('click', (e) => {
     e.preventDefault()
-    number.innerText = '0'
-})
+    let currentNumber = Number(number.innerText);
 
-moreButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    number.innerText = Number(number.innerText) + 1
-})
-
-lessButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    if (number.innerText != 0) {
-        number.innerText = Number(number.innerText) - 1;
+    if(e.target == resetButton){
+        number.innerText = '0'
+    }else if (e.target == moreButton){
+      number.innerText = currentNumber + 1
+    }else if (e.target == lessButton && currentNumber != 0) {
+        number.innerText = currentNumber - 1;
     }
 })
-
-
-
